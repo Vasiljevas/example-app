@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "http://localhost:3001/api/cards";
+const baseUrl = "/api/cards";
 
 export const getAll = async () => {
   return await axios.get(baseUrl).data;
