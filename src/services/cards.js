@@ -1,8 +1,9 @@
 import axios from "axios";
-const baseUrl = "/api/cards";
+const baseUrl = "http://localhost:3001/api/cards";
 
 export const getAll = async () => {
-  return await axios.get(baseUrl).data;
+  const response = await axios.get(baseUrl);
+  return response.data;
 };
 
 export const create = async (newObject) => {
