@@ -6,11 +6,11 @@ const Card = (card) => {
 	return (
 		<li>
 			<h1>
-				{card.name || "name"} {card.surname || "surname"}
+				{card.name} {card.surname}
 			</h1>
 			<div>
 				<p>
-					{card.validUntil || "valid until"}, {card.cardNumber || "number"}
+					{card.validUntil}, {card.cardNumber}
 				</p>
 			</div>
 		</li>
