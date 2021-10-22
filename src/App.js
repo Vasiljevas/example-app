@@ -1,15 +1,28 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { getAll } from "./services/cards";
-
-const getAllCards = async () => {
-  console.log(await getAll());
-};
+import { useEffect, useState } from "react";
+import Card from "./components/card";
 
 function App() {
-  getAllCards();
+  const [cards, setCards] = useState([]);
 
-  return <div className="App">Hello World, this is the front end!</div>;
+  useEffect(() => {
+    const getAllCards = async () => {
+      setCards(await getAll());
+    };
+    getAllCards();
+  }, []);
+
+  return (
+    <div className="App">
+      Hello World, this is the front end!
+      {cards && cards.length > 0 ? (
+        cards.map((c) => <Card key={c.id} card={c} />)
+      ) : (
+        <div>no cards found</div>
+      )}
+    </div>
+  );
 }
 
 export default App;
