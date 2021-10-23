@@ -21,7 +21,7 @@ const Cards = () => {
     return <ul>{cards && cards.length > 0 ? (
         cards.map((c) => <Card key={c.id} card={c} />)
     ) : (
-        <li>no cards found</li>
+        <div>no cards found</div>
     )}</ul>
 }
 

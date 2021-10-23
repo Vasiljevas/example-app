@@ -1,8 +1,8 @@
 import React from "react";
 
-const Card = (card) => {
+const Card = ({ card }) => {
 
-	React.useEffect(() => { console.log(card) }, []);
+	React.useEffect(() => { console.log(card) }, [card]);
 	return (
 		<li>
 			<h1>
