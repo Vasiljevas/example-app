@@ -1,6 +1,6 @@
-import Cards from "./components/cards";
+import Users from "./components/users";
 function App() {
-  return <Cards />;
+  return <Users />;
 }
 
 export default App;
