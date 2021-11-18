@@ -6,8 +6,6 @@ const Action = ({ action, onDelete, onEdit }) => {
             {action.id}, {action.action}, {action.user}, {action.date}
             <div>
                 <button onClick={() => onDelete(action.id)}>delete</button>
-            </div>
-            <div>
                 <button onClick={() => onEdit(action)}>Edit</button>
             </div>
         </li>

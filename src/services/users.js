@@ -20,5 +20,5 @@ export const updateUser = async (id, newObject) => {
 };
 
 export const deleteUser = async (id) => {
-	return await axios.delete(id);
+	return await axios.delete(`${baseUrl}/${id}`);
 };

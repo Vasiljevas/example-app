@@ -6,8 +6,6 @@ const User = ({ user, onDelete, onEdit }) => {
 			{user.id}, {user.name}, {user.phoneNumber}
 			<div>
 				<button onClick={() => onDelete(user.id)}>delete</button>
-			</div>
-			<div>
 				<button onClick={() => onEdit(user)}>Edit</button>
 			</div>
 		</li>

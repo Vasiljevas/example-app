@@ -91,7 +91,7 @@ const Users = ({ getAll, users }) => {
 							key={u.id}
 							user={u}
 							onDelete={handleDelete}
-							onEdit={(user) => setForm({ open: true, selected: user })}
+							onEdit={(user) => setForm({ open: "edit", selected: user })}
 						/>
 					)
 				) : (
