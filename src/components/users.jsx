@@ -89,7 +89,7 @@ const Users = ({ getAll, users }) => {
 					users.map((u) =>
 						<User
 							key={u.id}
-							action={u}
+							user={u}
 							onDelete={handleDelete}
 							onEdit={(user) => setForm({ open: true, selected: user })}
 						/>
