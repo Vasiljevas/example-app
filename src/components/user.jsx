@@ -1,17 +1,14 @@
 import React from "react";
 
-const User = ({ user }) => {
-
-	// React.useEffect(() => { console.log(card) }, [card]);
+const User = ({ user, onDelete, onEdit }) => {
 	return (
 		<li>
-			<h1>
-				{user.name} {user.phoneNumber}
-			</h1>
+			{user.id}, {user.name}, {user.phoneNumber}
 			<div>
-				<p>
-					{user.id}
-				</p>
+				<button onClick={() => onDelete(user.id)}>delete</button>
+			</div>
+			<div>
+				<button onClick={() => onEdit(user)}>Edit</button>
 			</div>
 		</li>
 	);
