@@ -74,12 +74,13 @@ const Actions = ({ getAll, actions }) => {
 						<label>Action:
 							<input name="action" onChange={handleFormUpdate} value={form.selected ? form.selected.action : ""} />
 						</label>
-						<label>User:
+						<label>User (id):
 							<input name="user" onChange={handleFormUpdate} value={form.selected ? form.selected.user : ""} />
 						</label>
-						<label>Date:
-							<input name="date" onChange={handleFormUpdate} value={form.selected ? form.selected.date : ""} />
-						</label>
+						{form.open === "edit" ? (
+							<label>Date:
+								<input name="date" onChange={handleFormUpdate} value={form.selected ? form.selected.date : ""} />
+							</label>) : null}
 						<button type="submit">{form.open === "edit" ? "edit" : "create"}</button>
 						<button onClick={() => {
 							setForm({ open: false, selected: null });
